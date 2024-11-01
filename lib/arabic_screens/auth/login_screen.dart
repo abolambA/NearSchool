@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.info_outline),
+          icon: const Icon(Icons.info_outline, color: Color(0xFF00246B),),
           onPressed: () {}, // Add your action here
         ),
         title: const Text('NearSchool', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF00246B))),
