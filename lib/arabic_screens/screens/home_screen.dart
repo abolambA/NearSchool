@@ -1,54 +1,67 @@
 import 'package:flutter/material.dart';
 import 'package:near_school/arabic_screens/screens/class_selecting.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Admin Section Select',
-      home: SectionSelectionScreen(),
-    );
-  }
-}
-
-class SectionSelectionScreen extends StatelessWidget {
+class AdminHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('App Name', style: TextStyle(color: Colors.blue.shade900)),
+        title: Text('App Name', style: TextStyle(color: Colors.blue[900])),
         backgroundColor: Colors.white,
-        leading: Icon(Icons.info_outline, color: Colors.blue.shade900),
-        centerTitle: true,
-        actions: [
-          Icon(Icons.language, color: Colors.blue.shade900),
-          SizedBox(width: 10),
-          Icon(Icons.star_border, color: Colors.blue.shade900),
-          SizedBox(width: 10),
-        ],
         elevation: 0,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.info_outline, color: Colors.blue[900]),
+          onPressed: () {},
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.language, color: Colors.blue[900]),
+            onPressed: () {},
+          ),
+        ],
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            buildSectionButton(context, 'Primary'),
-            SizedBox(height: 16),
-            buildSectionButton(context, 'Middle'),
-            SizedBox(height: 16),
-            buildSectionButton(context, 'Secondary'),
+            SelectionButton(
+              text: 'Primary',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ClassSelectionScreen(),
+                  ),
+                );
+              },
+            ),
+            SelectionButton(
+              text: 'Middle',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ClassSelectionScreen(),
+                  ),
+                );
+              },
+            ),
+            SelectionButton(
+              text: 'Secondary',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ClassSelectionScreen(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
-        backgroundColor: Colors.blue.shade900,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -59,39 +72,47 @@ class SectionSelectionScreen extends StatelessWidget {
             label: 'Profile',
           ),
         ],
+        selectedItemColor: Colors.blue[900],
       ),
     );
   }
+}
 
-  Widget buildSectionButton(BuildContext context, String section) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ClassSelectionScreen(section: section),
+class SelectionButton extends StatelessWidget {
+  final String text;
+  final VoidCallback onPressed;
+
+  SelectionButton({
+    required this.text,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 32.0),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.blue[900],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
           ),
-        );
-      },
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blue.shade900,
-        padding: EdgeInsets.symmetric(vertical: 16),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          padding: EdgeInsets.symmetric(vertical: 20.0),
         ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              Icon(Icons.people, color: Colors.white),
-              SizedBox(width: 8),
-              Text(section, style: TextStyle(color: Colors.white, fontSize: 16)),
-            ],
-          ),
-          Icon(Icons.arrow_forward_ios, color: Colors.white),
-        ],
+        onPressed: onPressed,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Icon(Icons.arrow_forward_ios, color: Colors.white),
+            Expanded(
+              child: Text(
+                text,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:near_school/arabic_screens/auth/register_screen.dart';
+//import 'package:near_school/arabic_screens/auth/register_screen.dart';
 import 'firebase_options.dart';
+import 'package:near_school/arabic_screens/screens/home_screen.dart';
 
 void main() async {
   await Firebase.initializeApp(
@@ -18,7 +19,8 @@ class NearSchool extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RegisterScreen(),
+      home: AdminHomeScreen(),
+      
     );
   }
 }
