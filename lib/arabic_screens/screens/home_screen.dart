@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:near_school/arabic_screens/screens/middle_class_selecting.dart';
+import 'package:near_school/arabic_screens/screens/primary_class_selecting.dart';
 import 'package:near_school/arabic_screens/screens/secondary_class_selecting.dart';
 
 class AdminHomeScreen extends StatelessWidget {
@@ -32,7 +33,7 @@ class AdminHomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SecondaryClassSelectionScreen(),
+                    builder: (context) => PrimaryClassSelectionScreen(),
                   ),
                 );
               },
