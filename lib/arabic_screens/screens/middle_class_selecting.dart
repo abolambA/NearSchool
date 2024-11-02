@@ -9,8 +9,8 @@ class _MiddleClassSelectionScreenState extends State<MiddleClassSelectionScreen>
   String? selectedGrade;
   String? selectedSection;
 
-  final List<String> grades = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4'];
-  final List<String> sections = ['Section 1', 'Section 2', 'Section 3'];
+  final List<String> grades = ['Grade 5', 'Grade 6', 'Grade 7', 'Grade 8'];
+  final List<String> sections = ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5', 'Section 6'];
 
   @override
   Widget build(BuildContext context) {

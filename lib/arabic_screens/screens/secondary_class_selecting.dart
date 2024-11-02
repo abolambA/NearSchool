@@ -9,8 +9,8 @@ class _SecondaryClassSelectionScreenState extends State<SecondaryClassSelectionS
   String? selectedGrade;
   String? selectedSection;
 
-  final List<String> grades = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4'];
-  final List<String> sections = ['Section 1', 'Section 2', 'Section 3'];
+  final List<String> grades = ['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'];
+  final List<String> sections = ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5', 'Section 6', 'Section 7', 'Section 8'];
 
   @override
   Widget build(BuildContext context) {
