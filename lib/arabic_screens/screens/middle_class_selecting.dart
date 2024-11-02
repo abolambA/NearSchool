@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ClassSelectionScreen extends StatefulWidget {
+class MiddleClassSelectionScreen extends StatefulWidget {
   @override
-  _ClassSelectionScreenState createState() => _ClassSelectionScreenState();
+  _MiddleClassSelectionScreenState createState() => _MiddleClassSelectionScreenState();
 }
 
-class _ClassSelectionScreenState extends State<ClassSelectionScreen> {
+class _MiddleClassSelectionScreenState extends State<MiddleClassSelectionScreen> {
   String? selectedGrade;
   String? selectedSection;
 
-  final List<String> grades = ['Grade 1', 'Grade 2', 'Grade 3'];
-  final List<String> sections = ['Section A', 'Section B', 'Section C'];
+  final List<String> grades = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4'];
+  final List<String> sections = ['Section 1', 'Section 2', 'Section 3'];
 
   @override
   Widget build(BuildContext context) {
