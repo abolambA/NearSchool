@@ -39,7 +39,7 @@ class _MiddleClassSelectionScreenState extends State<MiddleClassSelectionScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '( section name )',
+              'Middle',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,

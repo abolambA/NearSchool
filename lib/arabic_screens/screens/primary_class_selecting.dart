@@ -39,7 +39,7 @@ class _PrimaryClassSelectionScreenState extends State<PrimaryClassSelectionScree
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '( section name )',
+              'Primary',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,

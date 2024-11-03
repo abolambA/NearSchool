@@ -39,7 +39,7 @@ class _SecondaryClassSelectionScreenState extends State<SecondaryClassSelectionS
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '( section name )',
+              'Secondary',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
