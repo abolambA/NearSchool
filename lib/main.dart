@@ -15,7 +15,7 @@ class NearSchool extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Your App Name',
+      title: 'NearSchool',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

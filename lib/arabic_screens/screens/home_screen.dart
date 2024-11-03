@@ -11,8 +11,7 @@ class AdminHomeScreen extends StatelessWidget {
         title: Text('NearSchool', style: TextStyle(
           color: Colors.blue[900],
           fontWeight: FontWeight.bold,
-          )
-        ),
+        )),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
@@ -69,27 +68,46 @@ class AdminHomeScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[900],
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Expanded(
-              child: IconButton(
-                icon: Icon(Icons.home, color: Colors.white),
-                onPressed: () {},
+        child: SizedBox(
+          height: 56, // Increased height to avoid overflow
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Flexible(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.home, color: Colors.white, size: 24),
+                    SizedBox(height: 2), // Small space between icon and text
+                    Text(
+                      'Home',
+                      style: TextStyle(color: Colors.white, fontSize: 10),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Container(
-              height: 24,
-              width: 1,
-              color: Colors.grey[300], // Divider color
-            ),
-            Expanded(
-              child: IconButton(
-                icon: Icon(Icons.person, color: Colors.white),
-                onPressed: () {},
+              Container(
+                height: 24,
+                width: 1,
+                color: Colors.grey[300], // Divider color
               ),
-            ),
-          ],
+              Flexible(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.person, color: Colors.white, size: 24),
+                    SizedBox(height: 2), // Small space between icon and text
+                    Text(
+                      'Profile',
+                      style: TextStyle(color: Colors.white, fontSize: 10),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
