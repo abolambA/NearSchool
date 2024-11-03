@@ -103,15 +103,18 @@ class SelectionButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.arrow_forward_ios, color: Colors.white),
             Expanded(
               child: Text(
                 text,
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 20.0), // Add right margin
+              child: Icon(Icons.arrow_forward_ios, color: Colors.white),
             ),
           ],
         ),
