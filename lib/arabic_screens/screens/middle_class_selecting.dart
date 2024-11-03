@@ -16,7 +16,11 @@ class _MiddleClassSelectionScreenState extends State<MiddleClassSelectionScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('App Name', style: TextStyle(color: Colors.blue[900])),
+        title: Text('NearSchool', style: TextStyle(
+          color: Colors.blue[900],
+          fontWeight: FontWeight.bold,
+          )
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,

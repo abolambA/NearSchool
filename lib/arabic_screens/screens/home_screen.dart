@@ -8,7 +8,11 @@ class AdminHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('App Name', style: TextStyle(color: Colors.blue[900])),
+        title: Text('NearSchool', style: TextStyle(
+          color: Colors.blue[900],
+          fontWeight: FontWeight.bold,
+          )
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
@@ -63,18 +67,30 @@ class AdminHomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        selectedItemColor: Colors.blue[900],
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue[900],
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Expanded(
+              child: IconButton(
+                icon: Icon(Icons.home, color: Colors.white),
+                onPressed: () {},
+              ),
+            ),
+            Container(
+              height: 24,
+              width: 1,
+              color: Colors.grey[300], // Divider color
+            ),
+            Expanded(
+              child: IconButton(
+                icon: Icon(Icons.person, color: Colors.white),
+                onPressed: () {},
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
